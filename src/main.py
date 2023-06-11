@@ -1,12 +1,12 @@
-import math
+class Laptop:
+    def __init__(self, brand):
+        self.brand = brand
+        self.age = 10
 
-a = float(input('Enter first side: '))
-b = float(input('Enter second side: '))
-c = float(input('Enter third side: '))
+    def add_year(self, increment):
+        self.age = self.age + increment
 
-# calculate the semi-perimeter
-s = (a + b + c) / 2
 
-# calculate the area
-area = math.sqrt(s*(s-a)*(s-b)*(s-c))
-print('Area of your triangle is ', area)
+my_lapo = Laptop('Lenovo')
+my_lapo.add_year(5)
+print(my_lapo.age)
